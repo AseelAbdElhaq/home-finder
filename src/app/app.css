@@ -1,0 +1,26 @@
+:host {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.brand-name {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.brand-name a {
+  text-decoration: none;
+}
+
+.brand-name h1 {
+  color: #605dc8;
+  margin: 0;
+  font-size: 32px;
+}
+
+.content {
+  padding: 0 24px 40px;
+}

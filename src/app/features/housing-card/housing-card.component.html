@@ -1,0 +1,35 @@
+<section class="house-card">
+  <div class="image-wrapper">
+    <img
+      [src]="housingLocation.photo"
+      alt="Photo of {{ housingLocation.name }}"
+    />
+
+    <span
+      class="badge"
+      [class.full]="housingLocation.availableUnits === 0">
+      {{ housingLocation.availableUnits === 0 ? 'Fully booked' : housingLocation.availableUnits + ' units' }}
+    </span>
+
+    <button class="favorite-btn" type="button" (click)="toggleFavorite()">
+      {{ isFavorite ? '♥' : '♡' }}
+    </button>
+  </div>
+
+  <div class="card-body">
+    <h2>{{ housingLocation.name }}</h2>
+
+    <p class="location">
+      📍 {{ housingLocation.city }}, {{ housingLocation.state }}
+    </p>
+
+    <div class="features">
+      <span>📶 {{ housingLocation.wifi ? 'WiFi' : 'No WiFi' }}</span>
+      <span>🧺 {{ housingLocation.laundry ? 'Laundry' : 'No Laundry' }}</span>
+    </div>
+
+    <a class="view-btn" [routerLink]="['/details', housingLocation.id]">
+      View details →
+    </a>
+  </div>
+</section>
